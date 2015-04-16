@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define ITSHOULD_VERSION "v0.1.0"
+#define ITSHOULD_VERSION "v0.1.1"
 
 #define Describe(SUBJECT_STMT, BODY)            \
     do {                                        \
