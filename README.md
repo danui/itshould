@@ -43,8 +43,8 @@ For example the above could be written in a file as shown below.
 
 ## Provided Examples
 
-See examples [example-all-pass.c][example-all-pass.c] and
-[example-with-failure.c][example-with-failure.c].
+See examples [example-all-pass.c](example-all-pass.c) and
+[example-with-failure.c](example-with-failure.c).
 
 Run `make` to build examples.
 
