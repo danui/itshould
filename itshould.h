@@ -4,8 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define ITSHOULD_VERSION "v0.0.0"
+
 #define Describe(SUBJECT_STMT, BODY)            \
     do {                                        \
+        ITSHOULD_print_header();                \
         printf("\n");                           \
         ITSHOULD_print_indent();                \
         ITSHOULD_inc_indent();                  \
@@ -35,8 +38,16 @@
 
 #define Summarise() ITSHOULD_summarise()
 
+int ITSHOULD_did_header = 0;
 int ITSHOULD_indent = 0;
 int ITSHOULD_assert_count = 0;
+
+static inline void ITSHOULD_print_header(void) {
+    if (ITSHOULD_did_header)
+        return;
+    printf("\nITSHOULD %s\n", ITSHOULD_VERSION);
+    ITSHOULD_did_header = 1;
+}
 
 static inline void ITSHOULD_print_indent(void) {
     int i;
